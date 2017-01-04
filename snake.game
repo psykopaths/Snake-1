@@ -24,22 +24,22 @@ typedef struct snake snake;
 
 
 
-  void avance(game_board g, snake s){
+  void avance(game_board g, snake s,char w){
     start(g,s);
-    switch (direction)
+    switch (w)
         {
-        int i=0;
-        int z=8, d=4, q=6;
-        case z:
+        case w='z':
             s.tete_y--;
             break;
-        case d:
-            s.tete_x=s.tete_x-(i+1);
+        case w='d':
+            s.tete_x=s.tete_x--;
             break;
-        case q:
-            s.tete_x=s.tete_x+(i+1);
+        case w='q':
+            s.tete_x=s.tete_x++;
             break;
-
+        case w='s':
+            s.tete_x=s.tete_y++;
+            break;
         }
 
 
